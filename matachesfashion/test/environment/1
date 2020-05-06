@@ -1,0 +1,2 @@
+varaible "organizations_account_access_role_name" {}
+variable "child_accounts"

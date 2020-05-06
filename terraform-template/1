@@ -1,0 +1,14 @@
+variable "AWS_ACCESS_KEY"  {}
+variable "AWS_SECRET_KEY"  {}
+variable "AWS_REGION"  {
+		default = "us-west-1"
+}
+
+variable "AMIS" {
+	type = "map"
+	default = {
+		us-east-1 = ""
+		us-west-2 = "ami-087c2c50437d0b80d"
+		eu-west-1 = ""
+	}
+}

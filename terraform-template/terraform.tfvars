@@ -1,0 +1,7 @@
+AWS_ACCESS_KEY = "AKIAJINCGMHSH3LHS4VA"
+AWS_SECRET_KEY = "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"
+web_instance_type = "t2.micro"
+web_instance_key = "test"
+availability_zone = "us-west-2b"
+ami_id = "ami-087c2c50437d0b80d"
+key_name = "test"

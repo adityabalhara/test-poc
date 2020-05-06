@@ -1,0 +1,13 @@
+-
+  name: Deploy Apache Web Server
+  hosts: Web
+  become: yes
+  remote_user: ec2-user
+  tasks:
+    - name: Install Apache
+      yum: name=httpd state=present
+    - name: Create Web Page
+      shell: echo "<h1>Hello from </h1>" {{ web_ip }} >> /var/www/html/index.html
+    - name: Start Service
+      service: name=httpd state=started enabled=yes
+  

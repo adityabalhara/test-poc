@@ -1,0 +1,22 @@
+provider "aws" {
+  version = "= 2.18.0"
+}
+
+provider "aws" {
+  alias   = "secondary"
+  version = "= 2.18.0"
+  assume_role {
+    role_arn = "arn:aws:iam::123456789012:role/TerraformRole"
+  }
+}
+
+module {}
+
+resource "aws_iam_user" "user1" {
+  name = "user1"
+}
+
+resource "aws_iam_user" "user2" {
+  name     = ""
+  provider = aws.secondary
+}
